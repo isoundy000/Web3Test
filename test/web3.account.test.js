@@ -1,3 +1,10 @@
+/*
+ * @Author: qugang 
+ * @Date: 2018-01-09 12:35:45 
+ * @Last Modified by:   qugang 
+ * @Last Modified time: 2018-01-09 12:35:45 
+ */
+
 
 import chalk from 'chalk';
 import assert from 'assert';
@@ -55,6 +62,10 @@ describe('Web3Account', function () {
         it('测试使用私钥加密',function(){
            const result =  web3.eth.accounts.encrypt("c5cf8e1ccb6f5df908bdbf050a966901446e30f308e54f8a6370ce8325288a92", "helloWorld");
            chai.expect(result).to.not.equal(undefined)
+        })
+
+        it('测试创建用户钱包',function(){
+            console.log(web3.eth.accounts.wallet)
         })
         
     })
